@@ -54,16 +54,6 @@ const HomePage = () => {
               <span>Detailed Feedback</span>
             </div>
           </div>
-          
-          <div className="mt-16 w-full max-w-5xl rounded-xl border border-border bg-card/50 p-4 shadow-lg backdrop-blur-sm md:p-8">
-            <img 
-              src="https://placehold.co/1200x600/e6f2ff/2458c7?text=Resume+Analysis+Dashboard&font=montserrat"
-              alt="Resume Analysis Dashboard" 
-              className="rounded-lg"
-              width={1200}
-              height={600}
-            />
-          </div>
         </div>
       </section>
       
