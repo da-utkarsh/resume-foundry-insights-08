@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,6 +53,20 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Custom brand colors
+				brand: {
+					"50": "#f0f6fe",
+					"100": "#dceafc",
+					"200": "#c0dbfa",
+					"300": "#94c5f6",
+					"400": "#61a7f0",
+					"500": "#3e89e8",
+					"600": "#2a6cdb",
+					"700": "#2458c7",
+					"800": "#2349a3",
+					"900": "#224080",
+					"950": "#192854",
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -69,27 +84,50 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			keyframes: {
-				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+				"accordion-down": {
+					from: { height: "0" },
+					to: { height: "var(--radix-accordion-content-height)" },
 				},
-				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
+				"accordion-up": {
+					from: { height: "var(--radix-accordion-content-height)" },
+					to: { height: "0" },
+				},
+				"fade-in": {
+					"0%": { opacity: "0" },
+					"100%": { opacity: "1" },
+				},
+				"fade-out": {
+					"0%": { opacity: "1" },
+					"100%": { opacity: "0" },
+				},
+				"bounce-short": {
+					"0%, 100%": {
+						transform: "translateY(0)",
 					},
-					to: {
-						height: '0'
-					}
-				}
+					"50%": {
+						transform: "translateY(-5px)",
+					},
+				},
+				pulse: {
+					"0%, 100%": {
+						opacity: "1",
+					},
+					"50%": {
+						opacity: ".5",
+					},
+				},
 			},
 			animation: {
-				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				"accordion-down": "accordion-down 0.2s ease-out",
+				"accordion-up": "accordion-up 0.2s ease-out",
+				"fade-in": "fade-in 0.3s ease-out",
+				"fade-out": "fade-out 0.3s ease-out",
+				"bounce-short": "bounce-short 1s ease-in-out infinite",
+				"pulse-slow": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+			},
+			fontFamily: {
+				sans: ["Inter", "sans-serif"],
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
